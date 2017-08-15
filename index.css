@@ -1,0 +1,170 @@
+/*复位样式*/
+body,
+a,
+textarea,
+input {
+  font-family: SourceHanSans, Microsoft YaHei, "宋体", Verdana, Geneva, sans-serif;
+}
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+hr,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  font-size: 0px;
+}
+html,
+body {
+  font-family: "微软雅黑";
+  font-size: 20px;
+  /*根*/
+  color: #787878;
+  max-width: 640px;
+  margin: auto;
+}
+.container {
+  padding: 0rem 1rem;
+}
+p {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  text-align: justify;
+  text-indent: 1.3rem;
+}
+/*
+p{
+  font-size: 0.65rem;
+  line-height: 1.2rem;
+  text-align: justify;
+  text-indent: 1.3rem;
+}*/
+p + p {
+  margin-top: 0.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 0.8rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+ul {
+  padding: 0;
+}
+h3 {
+  font-size: 0.7rem;
+  color: #3a3a3a;
+  font-weight: normal;
+  text-align: center;
+  line-height: 2rem;
+}
+.pre {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.left-float {
+  float: left;
+}
+.right-float {
+  float: right;
+}
+.clearfix:after,
+.clearfix:before {
+  clear: both;
+}
+.text-red {
+  color: #e93a57;
+}
+.inline-block {
+  display: inline-block;
+}
+.head {
+  height: 3rem;
+}
+.head .logo1 img {
+  height: 3rem;
+  display: block;
+}
+.head .logo2 {
+  padding-top: 0.463rem;
+}
+.head .logo2 img {
+  height: 1.5rem;
+}
+.banner img {
+  height: 10rem;
+}
+.page_index {
+  position: relative;
+}
+.page_index .page_list {
+  height: 12rem;
+}
+.page_index .page_list .page_list_ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-top: 1.625rem;
+  display: inline-block;
+}
+.page_index .page_list .page_list_ul li .page_list_img {
+  width: 2rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.page_index .page_list .page_list_ul li .page_list_img img {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
+.page_index .page_list .page_list_ul li h4 {
+  font-size: 0.65rem;
+  font-weight: 400;
+}
+.recommend .re {
+  height: 2.8rem;
+}
+.recommend .re .recommend_list h4 {
+  font-size: 0.65rem;
+  text-align: center;
+  line-height: 1.25rem;
+  color: white;
+}

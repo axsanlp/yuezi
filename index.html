@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="js/swiper.min.css">
+    <link rel="stylesheet" href="index.css">
+    <!--<style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            width: 100%;
+            height: 5rem;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>-->
+    <style>
+        .video_height iframe {
+            height: 10.5rem;
+        }
+
+        .index_video {
+            width: 90%;
+            margin: auto;
+        }
+
+        .index_video img {
+            width: 100%;
+        }
+
+        .index_box {
+            display: none;
+        }
+
+        .obj_nav {
+            display: block !important;
+        }
+
+        .index_top {
+            height: 3rem;
+            background: white;
+        }
+
+        .logo2 {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+
+        .logo1 {
+            height: 3rem;
+        }
+
+        .index_top img {
+            height: 100%;
+        }
+
+        /*big_img*/
+        .big_img {
+            height: auto;
+            background: #e5e5e5;
+        }
+
+        /**/
+        .page_list {
+            height: 12rem;
+        }
+
+        .page_list_ul li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin-top: 1.625rem;
+            display: inline-block;
+        }
+
+        .page_list_img {
+            width: 2rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .page_list_ul li h4 {
+            font-size: 0.65rem;
+            font-weight: 400;
+        }
+
+        .recommend .re {
+            height: 2.8rem;
+        }
+
+        .recommend_list {
+            width: 4.125rem;
+            height: 1.25rem;
+            margin-right: 0.75rem;
+        }
+
+        .recommend_list h4 {
+            font-size: 0.65rem;
+            text-align: center;
+            line-height: 1.25rem;
+            color: white;
+        }
+
+        .bg1, .bg2 {
+            border-bottom-left-radius: 0.7rem;
+            border-top-right-radius: 0.7rem;
+            text-align: center;
+        }
+
+        .bg1 {
+            background: #EE8FB3;
+            border: 0.05rem solid #EE8FB3;
+        }
+
+        .bg2 {
+            background: #74C5BE;
+            border: 0.05rem solid #74C5BE;
+        }
+
+        .recommend_text {
+            height: auto;
+            display: none;
+        }
+
+        .recommend_text_ul {
+            border: 0.05rem solid #dcdcdc;
+            padding: 0 0.3rem;
+        }
+
+        .introduce {
+            height: auto;
+        }
+
+        .stars_ul_img {
+            width: 100%;
+            float: left;
+        }
+
+        .recommend_text_ul li span {
+            display: inline-block;
+            font-size: 0.6rem;
+        }
+
+        .recommend_article_box span.right-float {
+            width: 30%;
+            overflow: hidden;
+            height: 30px;
+        }
+
+        .prink_color {
+            color: #EE8FB3;
+            font-size: 12px;
+        }
+
+        .recommend_text_ul li {
+            position: relative;
+            height: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        .recommend_text_ul li .prink_color,
+        .recommend_text_ul li .bule_color {
+            width: 0.25rem;
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+        }
+
+        .text_hide {
+            width: 63%;
+            padding-left: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .margin-top {
+            margin-top: 0.8rem;
+        }
+
+        .margin-right {
+            margin-right: 1.2rem;
+        }
+
+        .see {
+            width: 5rem;
+            height: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .service_img {
+            margin-top: 0.5rem;
+            margin-left: 0.4rem;
+            width: 45.833333333333%;
+            position: relative;
+        }
+
+        .full {
+            width: 95.5555555555555555555%;
+        }
+
+        .service_img .pre,
+        .big_img .pre {
+            margin: 0;
+        }
+
+        .pic_text {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-size: 0.65rem;
+            color: #fdfdfd;
+        }
+
+        .pic_text span {
+            display: block;
+            text-shadow: 0.05px 0.05rem 0.05rem #8f9091;
+        }
+
+        .understand {
+            width: 3.2rem;
+            height: 1.2rem;
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            color: #fdfdfd;
+            text-shadow: 0.05px 0.05rem 0.05rem #8f9091;
+            border: 0.05rem solid #fff;
+            border-bottom-left-radius: 0.7rem;
+            border-top-right-radius: 0.7rem;
+            text-align: center;
+        }
+
+        .index_text {
+            margin-top: 1.5rem;
+        }
+
+        .index_comment .comment {
+            height: 2.75rem;
+            border: 0.05rem solid #dcdcdc;
+            margin: 0.5rem 0;
+        }
+
+        .head_portrait {
+            width: 2.75rem;
+            height: 2.75rem;
+            text-align: center;
+            display: inline-block;
+            float: left;
+        }
+
+        .index_comment .comment .inline-block {
+            border-radius: 50%;
+            background: #ccc;
+            width: 2.25rem;
+            height: 2.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .comment .stars, .stars_ul {
+            height: 1rem;
+            line-height: 1rem;
+            display: block;
+        }
+
+        .stars_ul li {
+            width: 0.625rem;
+            height: 0.625rem;
+            font-size: 0;
+            display: inline-block;
+        }
+
+        .stars_ul li img {
+            width: 100%;
+            margin: 0;
+            vertical-align: top;
+        }
+
+        .comment_text {
+            height: 1.75rem;
+            width: calc(100vw - 4.5rem);
+            /*white-space: nowrap;*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .comment_text .small_font {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*只能是webkit内核的浏览器*/
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            /*********end***************/
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            /*height: 1.7rem;
+            overflow: hidden;
+            position: relative;*/
+        }
+
+        /*.comment_text .small_font:after{
+            content: "......";
+            position: absolute;
+            height: 0.8rem;
+            width: 1.2rem;
+            background: white;
+            bottom: 0;
+            right: 0;
+            display: block;
+        }*/
+        .honor_list {
+            text-align: center;
+        }
+
+        .honor_list01 {
+            width: 18.75%;
+        }
+
+        .honor_list_img {
+            margin-bottom: 5%;
+        }
+
+        .honor_list02 {
+            width: 13.19444444444%;
+        }
+
+        .honor_list04 {
+            width: 40.6666666666%;
+        }
+
+        .honor_list .pre {
+            margin: 0;
+        }
+
+        .footer_top {
+            height: 9rem;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+            background: url(images/index_bg.jpg) no-repeat;
+            background-position: center;
+        }
+
+        .footer_top_center {
+            text-align: center;
+        }
+
+        .box_img {
+            width: 4.5rem;
+            height: 5.5rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .box_img span {
+            font-size: 0.7rem;
+            display: inline-block;
+            position: absolute;
+            width: 4.5rem;
+            height: 1rem;
+            left: 0rem;
+            bottom: -0.4rem;
+        }
+
+        .swiper-container {
+            text-align: none;
+        }
+
+        .store_list {
+            position: relative;
+            height: 7.5rem;
+            width: 48%;
+            display: inline-block;
+            border: none;
+        }
+
+        .store_list img {
+            height: 100%;
+            border: none;
+        }
+
+        .store_title {
+            position: absolute;
+            font-size: 1rem;
+            height: 1.15rem;
+            width: 95%;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            text-align: left;
+            padding-left: 5%;
+        }
+
+        .store_title h4 {
+            color: white;
+            line-height: 1.15rem;
+            font-size: 0.7rem;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .videoList {
+            margin-top: 20px;
+            clear: both;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .videoList img {
+            height: 88px;
+        }
+
+        .videoList ul {
+            margin: 0 0 0 2%;
+            overflow: hidden;
+        }
+
+        .videoList li {
+            width: 48%;
+            float: left;
+            height: auto;
+            margin: 0 2% 7% 0;
+            overflow: hidden;
+        }
+
+        .videoList li a h3 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .videoList li a h3 ins {
+            display: block;
+            height: 25px;
+            line-height: 25px;
+            background: #ecbc1a;
+            color: #fff;
+            padding: 0 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 0.5rem;
+        }
+
+        .videoList li a span {
+            display: block;
+            color: #000;
+            font-size: 1rem;
+            line-height: 1.2em;
+            padding: 7px 0 4px 0;
+        }
+
+        .videoList li a em {
+            display: block;
+            color: #858585;
+            line-height: 1.3em;
+            font-size: 0.6rem;
+            font-style: normal;
+
+        }
+    </style>
+</head>
+<body>
+<div class="head container">
+    <div class="logo1 left-float">
+        <img src="images/index_02.png" alt="">
+    </div>
+    <div class="logo2 right-float">
+        <img src="images/index_05.png" alt="">
+    </div>
+</div>
+
+
+<div class="swiper-container banner top_ba swiper-container-horizontal">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="images/sw1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <a href=""><img src="images/sw2.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="page_index">
+    <div class="page_list">
+        <ul class="page_list_ul">
+            <li>
+                <div class="page_list_img"><img src="images/sw_13.gif" alt="" class="pre"></div>
+                <h4>首页</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_10.gif" alt="" class="pre"></div>
+                <h4>关于仕馨</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_19.gif" alt="" class="pre"></div>
+                <h4>专业服务体系</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_16.gif" alt="" class="pre"></div>
+                <h4>分店介绍</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_25.gif" alt="" class="pre"></div>
+                <h4>套餐服务</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_26.gif" alt="" class="pre"></div>
+                <h4>妈妈见证</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_27.gif" alt="" class="pre"></div>
+                <h4>月子咨询</h4>
+            </li>
+            <li>
+                <div class="page_list_img"><img src="images/sw_29.gif" alt="" class="pre"></div>
+                <h4>预约参观</h4>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="re text-center">
+    <div class="recommend_list inline-block bg1">
+        <h4>热点推荐</h4>
+    </div>
+    <div class="recommend_list inline-block bg2">
+        <h4>视频专区</h4>
+    </div>
+</div>
+
+<div class="tab_box">
+    <div class="recommend_text container obj_nav">
+        <ul class="recommend_text_ul recommend_article_box">
+            <li><span class="prink_color">●</span> <span class="text_hide"><a href="article.php?id=55">宝宝拉肚子不要着急，先了解这些知识！</a></span>
+                <span class="right-float">─ 2017-08-14 17:38</span></li>
+            <li><span class="prink_color">●</span> <span class="text_hide"><a
+                    href="article.php?id=54">新生儿脐带如何护理？</a></span> <span class="right-float">─ 2017-08-14 17:24</span>
+            </li>
+            <li><span class="prink_color">●</span> <span class="text_hide"><a
+                    href="article.php?id=53">新生儿不吃母乳怎么办？</a></span> <span class="right-float">─ 2017-08-14 17:20</span>
+            </li>
+            <li><span class="prink_color">●</span> <span class="text_hide"><a
+                    href="article.php?id=52">新生儿皮肤怎么护理？</a></span> <span class="right-float">─ 2017-08-14 17:18</span>
+            </li>
+            <li><span class="prink_color">●</span> <span class="text_hide"><a
+                    href="article.php?id=51">月子里宝宝不要犯10种禁忌！</a></span> <span
+                    class="right-float">─ 2017-08-14 17:14</span></li>
+            <li><span class="prink_color">●</span> <span class="text_hide"><a href="article.php?id=50">明星爱剖宫产
+                剖腹产后孕二胎要注意什么？</a></span> <span class="right-float">─ 2017-08-14 17:12</span></li>
+            <li><span class="prink_color">●</span> <span class="text_hide"><a
+                    href="article.php?id=49">过期妊娠的危害，准妈知多少？</a></span> <span
+                    class="right-float">─ 2017-08-14 17:09</span></li>
+        </ul>
+    </div>
+    <div class="recommend_text container">
+        <div class="recommend_text_ul video_height">
+            <!-- Swiper -->
+
+            <!-- <div class="swiper-container banner" id="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="index_video">
+                        <img src="images/index_video1.jpg"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="index_video">
+                        <img src="images/index_video1.jpg"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="index_video">
+                        <img src="images/index_video1.jpg"></div>
+                </div>
+            </div>
+        </div>
+        -->
+            <div id="video_iframe">
+                <iframe frameborder="0" height="auto" width="100%"
+                        src="https://v.qq.com/iframe/player.html?vid=e01560xy74g&amp;tiny=0&amp;auto=0"
+                        allowfullscreen=""></iframe>
+            </div>
+            <div class="videoList">
+                <ul></ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+</script>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<!--   <script>
+       var swiper = new Swiper('.swiper-container', {
+           pagination: '.swiper-pagination',
+           nextButton: '.swiper-button-next',
+           prevButton: '.swiper-button-prev',
+           paginationClickable: true,
+           spaceBetween: 30,
+           centeredSlides: true,
+           autoplay: 2500,
+           autoplayDisableOnInteraction: false
+       });
+   </script>-->
+</body>
+</html>
